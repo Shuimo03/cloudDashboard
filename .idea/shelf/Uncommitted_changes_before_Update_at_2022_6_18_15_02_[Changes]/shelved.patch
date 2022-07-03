@@ -1,0 +1,26 @@
+Index: src/app/internal/db/MySQLInit.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/app/internal/db/MySQLInit.go b/src/app/internal/db/MySQLInit.go
+new file mode 100644
+--- /dev/null	(date 1655525113657)
++++ b/src/app/internal/db/MySQLInit.go	(date 1655525113657)
+@@ -0,0 +1,16 @@
++package db
++
++import (
++	"gorm.io/driver/mysql"
++	"gorm.io/gorm"
++)
++
++func DBConn() *gorm.DB {
++	dsn := "root:WUliang1998102@tcp(106.15.191.113:3306)/cloud_dashboard"
++	//db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
++	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
++	if err != nil {
++		panic(err)
++	}
++	return db
++}
