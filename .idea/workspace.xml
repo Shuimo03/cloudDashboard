@@ -4,42 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72137249-8960-4ef2-8b25-e2a1017c0122" name="Changes" comment="feat: jwt">
-      <change afterPath="$PROJECT_DIR$/app/internal/controller/login.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/internal/services/v1/login.go" afterDir="false" />
+    <list default="true" id="72137249-8960-4ef2-8b25-e2a1017c0122" name="Changes" comment="todo: 登录注册">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/configurationCache.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/dryrun.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/targets.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/design/JWT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/design/RBAC.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/功能设计.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/cli/docker/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/cli/docker/cli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/cli/kubernetes/cli.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/cli/kubernetes/cli.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/controller/container.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/container.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/controller/images.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/images.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/controller/login.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/controller/pods.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/pods.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/dao/user.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/db/initMySQL.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/db/initMySQL.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/dto/images.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/dto/images.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/dto/pod.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/dto/pod.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/dto/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/dto/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/middleware/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/model/v1/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/pkg/containerMessage.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/pkg/jwt.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/router/dockerInit.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/dockerInit.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/router/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/router/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/router/podsRouter.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/podsRouter.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/services/v1/container.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/container.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/services/v1/images.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/images.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/services/v1/login.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/services/v1/namespaces.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/namespaces.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/internal/services/v1/pods.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/pods.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +143,8 @@
     <MESSAGE value="build:项目重构,实现登录注册" />
     <MESSAGE value="build:项目重构" />
     <MESSAGE value="feat: jwt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: jwt" />
+    <MESSAGE value="todo: 登录注册" />
+    <option name="LAST_COMMIT_MESSAGE" value="todo: 登录注册" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
