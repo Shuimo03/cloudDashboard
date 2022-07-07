@@ -21,7 +21,7 @@ func GetPods(context *gin.Context) {
 }
 
 func GetNamespace(context *gin.Context) {
-	nameList := services.services.GetNamespace()
+	nameList := services.GetNamespace()
 	context.JSON(http.StatusOK, gin.H{
 		"NameSpace:": nameList,
 	})
