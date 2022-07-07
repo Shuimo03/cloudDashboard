@@ -1,15 +1,19 @@
 package v1
 
 import (
-	"dashboard/app/internal/db"
 	"fmt"
 	"github.com/google/uuid"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
+	"log"
 	"time"
 )
 
-type UserModel struct {
+type UserOperate interface {
+	Create(db *gorm.DB) (*User, error)
+}
+
+type User struct {
 	Id        string    `gorm:"type:char(45);primaryKey"`
 	Password  string    `json:"password"`
 	Name      string    `json:"Name"`
@@ -18,24 +22,18 @@ type UserModel struct {
 	UpdatedAt time.Time `json:"updated_at"`
 }
 
-type UserOperate interface {
-	db.DBService
-	CreateUser(user *UserModel, config gorm.Config) error
-}
-type userService struct {
-	db.MySQLDBService
-}
-
-func (service *userService) CreateUser(user *UserModel, config gorm.Config) error {
-	res := service.DBcommon(config)
-	user.Id = uuid.New().String()
-	user.CreatedAt = time.Now()
-	user.UpdatedAt = time.Now()
-	hash, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+func (userModel *User) Create(db *gorm.DB) (*User, error) {
+	userModel.Id = uuid.New().String()
+	userModel.CreatedAt = time.Now()
+	userModel.UpdatedAt = time.Now()
+	hash, err := bcrypt.GenerateFromPassword([]byte(userModel.Password), bcrypt.DefaultCost)
 	if err != nil {
 		fmt.Println(err)
 	}
-	user.Password = string(hash)
-	res.Create(user)
-	return nil
+	userModel.Password = string(hash)
+	dberr := db.Create(&userModel).Error
+	if err != nil {
+		log.Fatalln(dberr)
+	}
+	return userModel, dberr
 }
