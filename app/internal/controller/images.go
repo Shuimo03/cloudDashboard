@@ -9,7 +9,7 @@ import (
 
 func GetImagesID(context *gin.Context) {
 
-	imagesID := services.services.ImagesID()
+	imagesID := services.ImagesID()
 	context.JSON(http.StatusOK, gin.H{
 		"ImagesID:": imagesID,
 	})

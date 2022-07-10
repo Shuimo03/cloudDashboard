@@ -9,7 +9,7 @@ import (
 
 func GetContainerName(context *gin.Context) {
 
-	containerName := services.services.GetContainerNameList()
+	containerName := services.GetContainerNameList()
 	context.JSON(http.StatusOK, gin.H{
 		"containerName": containerName,
 	})
