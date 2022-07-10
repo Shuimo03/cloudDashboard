@@ -1,11 +1,7 @@
 package v1
 
 import (
-	"fmt"
-	"github.com/google/uuid"
-	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
-	"log"
 	"time"
 )
 
@@ -23,17 +19,6 @@ type User struct {
 }
 
 func (userModel *User) Create(db *gorm.DB) (*User, error) {
-	userModel.Id = uuid.New().String()
-	userModel.CreatedAt = time.Now()
-	userModel.UpdatedAt = time.Now()
-	hash, err := bcrypt.GenerateFromPassword([]byte(userModel.Password), bcrypt.DefaultCost)
-	if err != nil {
-		fmt.Println(err)
-	}
-	userModel.Password = string(hash)
-	dberr := db.Create(&userModel).Error
-	if err != nil {
-		log.Fatalln(dberr)
-	}
-	return userModel, dberr
+	err := db.Create(userModel).Error
+	return userModel, err
 }

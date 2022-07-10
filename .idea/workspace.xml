@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72137249-8960-4ef2-8b25-e2a1017c0122" name="Changes" comment="todo: 登录注册">
+      <change afterPath="$PROJECT_DIR$/app/internal/db/MySQL.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/pkg/response/http.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/controller/container.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/container.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/controller/images.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/images.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/controller/login.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/dao/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/dao/v1/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/db/initMySQL.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/model/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/model/v1/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/router/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/services/v1/login.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/services/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +40,13 @@
     <setting file="file://C:/Program Files/Go/src/time/time.go" root0="SKIP_INSPECTION" />
     <setting file="file://$USER_HOME$/go/pkg/mod/github.com/golang-jwt/jwt/v4@v4.2.0/claims.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/app/cmd/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/app/internal/controller/login.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/internal/db/MySQL.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/internal/middleware/auth.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/internal/model/v1/user.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/internal/router/dockerInit.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/internal/router/init.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/app/internal/router/podsRouter.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/app/internal/services/v1/user.go" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,7 +69,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/cola/sourcode/KubePi&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/paopao-ce&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
@@ -69,7 +83,7 @@
       <recent name="D:\cloudDashboard\app\internal\dao\v1" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build dashboard/src/app/internal/cmd">
+  <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="cloudDashboard" />
       <working_directory value="$PROJECT_DIR$" />
@@ -78,22 +92,13 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build dashboard/src/app/internal/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build dashboard/app/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="cloudDashboard" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="dashboard/src/app/internal/cmd" />
+      <package value="dashboard/app/cmd" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/app/internal/cmd/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="cloudDashboard" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <package value="dashboard" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/src/app/cmd/main.go" />
+      <filePath value="$PROJECT_DIR$/app/cmd/main.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -107,8 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build dashboard/src/app/internal/cmd" />
-        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build dashboard/app/cmd" />
       </list>
     </recent_temporary>
   </component>
@@ -148,5 +152,21 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/internal/dao/v1/user.go</url>
+          <line>13</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/app/internal/controller/user.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

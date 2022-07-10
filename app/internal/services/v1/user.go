@@ -4,23 +4,31 @@ import (
 	dao "dashboard/app/internal/dao/v1"
 	"dashboard/app/internal/dto"
 	model "dashboard/app/internal/model/v1"
-	"fmt"
+	"github.com/google/uuid"
+	"github.com/sirupsen/logrus"
+	"golang.org/x/crypto/bcrypt"
+	"time"
 )
 
-type UserCrud struct {
-	dao dao.UserDao
-}
+func Register(user *dto.User) (*model.User, error) {
 
-func (u *UserCrud) SignUp(user *dto.User) (*model.User, error) {
-	res := &model.User{
-		Name:     user.Name,
-		Password: user.Password,
-		Email:    user.Email,
+	password, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	if err != nil {
+		logrus.Fatalf("PassWord: %v", err)
 	}
 
-	createUser, err := u.dao.CreateUser(res)
+	res := &model.User{
+		Id:        uuid.New().String(),
+		Name:      user.Name,
+		Password:  string(password),
+		Email:     user.Email,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+	}
+
+	createUser, err := dao.CreateUser(res)
 	if err != nil {
-		fmt.Println(err)
+		logrus.Fatalf("Create User %v", err)
 	}
 	return createUser, nil
 

@@ -1,18 +1,15 @@
 package v1
 
 import (
+	mysql "dashboard/app/internal/db"
 	model "dashboard/app/internal/model/v1"
-	"gorm.io/gorm"
 )
 
 type UserDao interface {
 	CreateUser(user *model.User) (*model.User, error)
 }
 
-type userDB struct {
-	db *gorm.DB
-}
-
-func (u *userDB) CreateUser(user *model.User) (*model.User, error) {
-	return user.Create(u.db)
+func CreateUser(user *model.User) (*model.User, error) {
+	db := mysql.DBcommon()
+	return user.Create(db)
 }
