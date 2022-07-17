@@ -24,3 +24,18 @@ func CreateUser(context *gin.Context) {
 		"User": res,
 	})
 }
+
+func GetByUserName(context *gin.Context) {
+
+	user := &dto.User{
+		Name: context.Query("name"),
+	}
+	res, err := services.IsValidUsername(user)
+	if err != nil {
+		logrus.Errorf("service.Register err: %v", err)
+	}
+
+	context.JSON(http.StatusOK, gin.H{
+		"User": res,
+	})
+}

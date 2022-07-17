@@ -33,3 +33,19 @@ func Register(user *dto.User) (*model.User, error) {
 	return createUser, nil
 
 }
+
+/**
+用户名只能由字母、数字及连字符 (-) 组成
+*/
+
+//IsValidUsername 检查用户名是否有效,并且是否存在
+func IsValidUsername(user *dto.User) (*model.User, error) {
+	res := &model.User{
+		Name: user.Name,
+	}
+	userName, err := dao.GetUserByUserName(res)
+	if err != nil {
+		logrus.Fatalf("GetUserByUserName Error %v", err)
+	}
+	return userName, nil
+}

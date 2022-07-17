@@ -5,11 +5,13 @@ import (
 	model "dashboard/app/internal/model/v1"
 )
 
-type UserDao interface {
-	CreateUser(user *model.User) (*model.User, error)
-}
+var db = mysql.DBcommon()
 
 func CreateUser(user *model.User) (*model.User, error) {
-	db := mysql.DBcommon()
 	return user.Create(db)
+}
+
+func GetUserByUserName(user *model.User) (*model.User, error) {
+	res := db.Where("name ? =", user.Name)
+	return user.Where(res)
 }

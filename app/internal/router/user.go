@@ -10,6 +10,7 @@ func LoginUserRouter() *gin.Engine {
 	LoginUser := router.Group("/v1/user")
 	{
 		LoginUser.POST("/register", controller.CreateUser) //注册
+		LoginUser.POST("/username", controller.GetByUserName)
 	}
 	return router
 }

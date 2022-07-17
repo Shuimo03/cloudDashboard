@@ -7,6 +7,7 @@ import (
 
 type UserOperate interface {
 	Create(db *gorm.DB) (*User, error)
+	Where(db *gorm.DB) (*User, error)
 }
 
 type User struct {
@@ -20,5 +21,10 @@ type User struct {
 
 func (userModel *User) Create(db *gorm.DB) (*User, error) {
 	err := db.Create(userModel).Error
+	return userModel, err
+}
+
+func (userModel *User) Where(db *gorm.DB) (*User, error) {
+	err := db.Where(userModel).Error
 	return userModel, err
 }

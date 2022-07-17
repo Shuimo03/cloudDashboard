@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72137249-8960-4ef2-8b25-e2a1017c0122" name="Changes" comment="todo: 登录注册">
-      <change afterPath="$PROJECT_DIR$/app/internal/db/MySQL.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/pkg/response/http.go" afterDir="false" />
+    <list default="true" id="72137249-8960-4ef2-8b25-e2a1017c0122" name="Changes" comment="feat: 登录注册">
+      <change afterPath="$PROJECT_DIR$/app/internal/middleware/jwt.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/controller/container.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/container.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/controller/images.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/images.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/controller/login.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/cmd/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/internal/controller/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/controller/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/internal/dao/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/dao/v1/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/db/initMySQL.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/internal/model/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/model/v1/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/router/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/internal/services/v1/login.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/internal/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/router/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/internal/services/v1/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/internal/services/v1/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/paopao-ce&quot;,
+    &quot;last_opened_file_path&quot;: &quot;//wsl$/Ubuntu-20.04/home/cola/sourcode/kubesphere&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
@@ -84,14 +81,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="cloudDashboard" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="FILE" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build dashboard/app/cmd" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="cloudDashboard" />
       <working_directory value="$PROJECT_DIR$" />
@@ -99,15 +88,6 @@
       <package value="dashboard/app/cmd" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/app/cmd/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="cloudDashboard" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -148,25 +128,10 @@
     <MESSAGE value="build:项目重构" />
     <MESSAGE value="feat: jwt" />
     <MESSAGE value="todo: 登录注册" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo: 登录注册" />
+    <MESSAGE value="feat: 登录注册" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 登录注册" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/internal/dao/v1/user.go</url>
-          <line>13</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/app/internal/controller/user.go</url>
-          <line>17</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
